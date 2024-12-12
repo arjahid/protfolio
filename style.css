@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+* {
+    font-family: "Protest Revolution", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-color: #e43c39;
+}
+
+body {
+    background-color: #111;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.nav-container {
+    padding: 40px 0;
+    animation: navfadup 1s ease;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--red-color);
+    cursor: pointer;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu .links {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.menu .links li {
+    padding: 6px 15px;
+    border-radius: 50px;
+
+}
+
+.menu .links li a {
+    text-decoration: none;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+.menu .links a :focus {
+    outline: none;
+}
+
+.links .active {
+    background-color: var(--red-color);
+}
+
+.menu .links a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--red-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 0.3s ease;
+
+}
+
+.menu .links a:hover::before {
+    width: 100%;
+}
+
+nav .login {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+nav .login i {
+    font-size: 30px;
+    color: var(--red-color);
+}
+
+.login .login-button {
+    border: none;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 2px solid var(--red-color);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.login .login-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--red-color);
+    transition: 0.3s ease;
+}
+
+.login .login-button:hover::before {
+    width: 100%;
+}
+
+.login span {
+    position: inherit;
+}
+
+.login-button:hover {
+    color: #fff;
+}
+
+/* adding animation inton top nav bar */
+@keyframes navfadup {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.page-content {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    position: relative;
+}
+
+.page-content .info {
+    max-width: 600px;
+    color: #fff;
+
+}
+
+.info h3 {
+    font-size: 30px;
+    font-weight: 400;
+    animation: textfadeup 2s ease;
+}
+
+.info h1 {
+    font-size: 55px;
+    font-weight: 600;
+    animation: left 2s ease;
+}
+
+.info h1+p {
+    font-size: 25px;
+    animation: right 2s ease;
+}
+
+.info h1+p span {
+    color: var(--red-color);
+}
+
+.info p+p {
+    margin: 20px 0 40px;
+    letter-spacing: 0.5px;
+}
+
+.info .social-media {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px;
+    font-size: 25px;
+    color: var(--red-color);
+    cursor: pointer;
+}
+
+.social-media i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--red-color);
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.social-media i:hover {
+    box-shadow: 0 0 50px 10px #007bff;
+    color: #007bff;
+}
+
+.info .buttons {
+    display: flex;
+    gap: 50px;
+}
+
+.buttons .btn {
+    border: none;
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 50px #f50b07;
+    background-color: #e43c39;
+    color: #fff;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.buttons .btn :focus {
+    outline: none;
+
+}
+
+.buttons .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.page-content .image {
+    width: 300px;
+    height: 400px;
+    margin-top: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 50px 50px 10px rgba(0, 0, 0, 0.9);
+    transition: 0.3s ease;
+    box-shadow: 0 2px 10px 5px #f50b07;
+
+
+}
+
+.image:hover {
+    box-shadow: 0 20px 70px 5px #f50b07;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.image img {
+    transform: scale(1.05);
+}
+
+@keyframes textfadeup {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(-80px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes right {
+    0% {
+        transform: translateX(80px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/*  */
+
+
+ol {
+    list-style-type: none;
+    padding: 0;
+    width: 40%;
+    
+}
+
+li {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #d40505;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ddd;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color:var(--red-color); /* Change color as needed */
+    width: 0;
+    border-radius: 10px;
+    animation: load 2s forwards;
+}
+#skill{
+    font-size: xx-large;
+    padding-left: 70px;
+    color: var(--red-color);
+    
+    
+}
+
+
+@keyframes load {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+/*  */
+.soft-skil{
+    text-align: center;
+    padding-left: 40px;
+}
+#skill2{
+    color: var(--red-color);
+    padding-bottom: 15px;
+    
+}
+/*  */
+.video{
+    text-align: center;
+    
+}
+#video1{
+    box-shadow: 3px 4px 5px 3px var(--red-color);
+   
+}
+#video1:hover{
+    box-shadow: 13px 14px 15px 13px var(--red-color);
+    transform: translate(30px, -40px)
+    
+}
+
+
+
+/*  */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, transparent, rgb(62, 14, 83), transparent);
+    text-align: center;
+}
+
+.footer .social-icons {
+    margin: 10px 0;
+   text-align: center;
+   padding-bottom: 30px;
+}
+
+.footer .social-icons a {
+    color:  #007bff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #007bff;
+    box-shadow: 0 0 50px 10px #007bff;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgb(241, 234, 234), transparent);
+}
+
+/*  */
+@media (max-width: 575.98px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info h1 {
+        font-size: 40px;
+    }
+
+    .info p {
+        font-size: 18px;
+    }
+
+    .social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .page-content .image {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .info h1 {
+        font-size: 45px;
+    }
+
+    .info p {
+        font-size: 20px;
+    }
+
+    .social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .page-content .image {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .info h1 {
+        font-size: 50px;
+    }
+
+    .info p {
+        font-size: 22px;
+    }
+
+    .buttons .btn {
+        width: 140px;
+    }
+
+    .page-content .image {
+        width: 370px;
+        height: 370px;
+    }
+}
