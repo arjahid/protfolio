@@ -451,9 +451,10 @@ li {
     nav, .menu, .login {
         flex-direction: column;
         align-items: center;
-        
+        margin-left: 10px;
         
     }
+    
 
     .page-content {
         flex-direction: column;
